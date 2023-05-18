@@ -15,5 +15,9 @@ class House
     @rooms.push(room)
   end
 
+  def above_market_average?
+    @price.to_i > 500000
+  end
+
 
 end
