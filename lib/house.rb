@@ -18,6 +18,14 @@ class House
   def above_market_average?
     @price.to_i > 500000
   end
-
-
+  
+=begin
+Couldn't wrap my head around how get the category
+symbol to reference the room object it was in!
+Daaaaang..
+=end
+  def rooms_from_category(category)
+    # if category == @rooms
+    # end
+  end
 end
