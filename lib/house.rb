@@ -19,13 +19,21 @@ class House
     @price.to_i > 500000
   end
   
-=begin
-Couldn't wrap my head around how get the category
-symbol to reference the room object it was in!
-Daaaaang..
-=end
   def rooms_from_category(category)
-    # if category == @rooms
-    # end
+    @rooms.find_all do |room|
+      if room.category == category
+        room
+      end
+    end
   end
+
+  def area
+    house_area = []
+    @rooms.each do |room|
+      house_area.push(room.length * room.width.to_i)
+    end
+    house_area.sum
+  end
+
 end
+
