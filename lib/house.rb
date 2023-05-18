@@ -11,5 +11,9 @@ class House
     @price.to_i
   end
 
+  def add_room(room)
+    @rooms.push(room)
+  end
+
 
 end
